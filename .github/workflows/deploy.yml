@@ -42,6 +42,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
+          name: my-artifact-${{ github.run_id }}  # Adiciona um sufixo único ao nome do artefato
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

@@ -1,0 +1,23 @@
+---
+import {Image} from 'astro:assets';
+import logoHorizontal from '../assets/img/logo-horizontal.png';
+---
+
+<header class="bg-shape-background py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <a href="/" class="flex items-center">
+            <Image src={logoHorizontal} alt="Encantos Literários" width={200} height={50}/>
+        </a>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="#sobre" class="text-text-body hover:text-text-title transition-colors">Sobre</a></li>
+                <li><a href="#planos" class="text-text-body hover:text-text-title transition-colors">Planos</a></li>
+                <li><a href="#contato" class="text-text-body hover:text-text-title transition-colors">Contato</a></li>
+            </ul>
+        </nav>
+        <a href="#assinar"
+           class="bg-pink-base hover:bg-pink-dark text-white font-bold py-2 px-4 rounded transition-colors">
+            Assinar
+        </a>
+    </div>
+</header>

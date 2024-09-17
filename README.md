@@ -8,7 +8,7 @@ O projeto está hospedado no GitHub Pages e pode ser acessado através do link: 
 
 ## 🚀 Estrutura do Projeto
 
-Dentro do seu projeto Astro, você verá as seguintes pastas:
+Dentro do projeto Astro, você verá as seguintes pastas:
 
 ```text
 src

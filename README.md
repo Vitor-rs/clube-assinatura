@@ -4,7 +4,7 @@ Bem-vindo ao Encantos Literários, o clube de assinatura que desperta a sua imag
 
 ## Hospedagem do Projeto
 
-O projeto está hospedado no GitHub Pages e pode ser acessado através do link: [Encantos Literários](https://encantosliterarios.github.io/)
+O projeto está hospedado no GitHub Pages e pode ser acessado através do link: [Encantos Literários](https://vitor-rs.github.io/clube-assinatura/)
 
 ## 🚀 Estrutura do Projeto
 

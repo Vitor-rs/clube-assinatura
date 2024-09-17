@@ -2,6 +2,10 @@
 
 Bem-vindo ao Encantos Literários, o clube de assinatura que desperta a sua imaginação e explora novos mundos através da leitura.
 
+## Hospedagem do Projeto
+
+O projeto está hospedado no GitHub Pages e pode ser acessado através do link: [Encantos Literários](https://encantosliterarios.github.io/)
+
 ## 🚀 Estrutura do Projeto
 
 Dentro do seu projeto Astro, você verá as seguintes pastas:

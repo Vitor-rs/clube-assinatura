@@ -91,7 +91,7 @@ import SubscriptionCard from './SubscriptionCard.astro';
 </style>
 
 <script>
-    function isInViewport(element) {
+    function isInViewport(element: HTMLElement) {
         const rect = element.getBoundingClientRect();
         return (
             rect.top >= 0 &&
@@ -104,8 +104,9 @@ import SubscriptionCard from './SubscriptionCard.astro';
     function handleScroll() {
         const animatedElements = document.querySelectorAll('.animate-fade-in, .animate-slide-in');
         animatedElements.forEach(element => {
-            if (isInViewport(element)) {
-                element.style.animationPlayState = 'running';
+            const htmlElement = element as HTMLElement;
+            if (isInViewport(htmlElement)) {
+                htmlElement.style.animationPlayState = 'running';
             }
         });
     }

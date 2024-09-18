@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets';
+import kitImage from '../assets/img/book.png'; // Assuma que temos uma imagem do kit completo
+import bookIcon from '../assets/img/book.png';
+import pinIcon from '../assets/img/pin.png';
+import bookmarkIcon from '../assets/img/bookmark-yellow.png';
+---
+<section aria-label="Kit Mensal" class="bg-gradient-to-b from-pink-light/30 to-pink-dark/30 py-20">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">
+            <span class="text-blue-light">✦</span> Conheça o kit mensal <span class="text-blue-light">✦</span>
+        </h2>
+
+        <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+            <div class="w-full md:w-1/2 max-w-md">
+                <Image
+                        src={kitImage}
+                        alt="Kit mensal Encantos Literários"
+                        width={500}
+                        height={500}
+                        class="w-full h-auto rounded-lg shadow-xl"
+                />
+            </div>
+
+            <div class="w-full md:w-1/2 max-w-md space-y-8">
+                <div class="flex items-start space-x-4">
+                    <Image src={bookIcon} alt="Ícone de livro" width={24} height={24} />
+                    <div>
+                        <h3 class="font-bold text-xl text-purple-400">Livro Surpresa</h3>
+                        <p class="text-pink-300">Um livro cuidadosamente selecionado em capa dura para sua coleção.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <Image src={pinIcon} alt="Ícone de broche" width={24} height={24} />
+                    <div>
+                        <h3 class="font-bold text-xl text-purple-400">Broche Exclusivo</h3>
+                        <p class="text-pink-300">Um broche temático para personalizar sua mochila ou estante.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <Image src={bookmarkIcon} alt="Ícone de marcador de página" width={24} height={24} />
+                    <div>
+                        <h3 class="font-bold text-xl text-purple-400">Marcadores de Página</h3>
+                        <p class="text-pink-300">Marcadores temáticos para acompanhar sua leitura com estilo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

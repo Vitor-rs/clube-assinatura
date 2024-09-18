@@ -1,0 +1,60 @@
+---
+import { Image } from 'astro:assets';
+import logoHorizontal from '../assets/img/logo-horizontal.png';
+
+---
+
+<footer class="bg-shape-base text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+            <div class="mb-6 md:mb-0">
+                <Image src={logoHorizontal} alt="Encantos Literários" width={200} height={50} />
+            </div>
+            <div class="flex space-x-4">
+
+                <a href="#" class="text-blue-light hover:text-pink-light transition-colors">
+                    <span class="sr-only">Instagram</span>
+
+                </a>
+                <a href="#" class="text-blue-light hover:text-pink-light transition-colors">
+                    <span class="sr-only">Twitter</span>
+
+                </a>
+                <a href="#" class="text-blue-light hover:text-pink-light transition-colors">
+                    <span class="sr-only">Facebook</span>
+
+                </a>
+                <a href="#" class="text-blue-light hover:text-pink-light transition-colors">
+                    <span class="sr-only">Discord</span>
+
+                </a>
+                <a href="#" class="text-blue-light hover:text-pink-light transition-colors">
+                    <span class="sr-only">WhatsApp</span>
+
+                </a>
+                <a href="#" class="text-blue-light hover:text-pink-light transition-colors">
+                    <span class="sr-only">Email</span>
+
+                </a>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-lg font-bold mb-4 text-pink-light">Conteúdos</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-pink-light transition-colors">Kits passados</a></li>
+                    <li><a href="#" class="hover:text-pink-light transition-colors">Clube de membros</a></li>
+                    <li><a href="#" class="hover:text-pink-light transition-colors">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4 text-pink-light">Ajuda</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-pink-light transition-colors">Central de ajuda</a></li>
+                    <li><a href="#" class="hover:text-pink-light transition-colors">Regulamentos</a></li>
+                    <li><a href="#" class="hover:text-pink-light transition-colors">Suporte</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

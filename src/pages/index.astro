@@ -3,54 +3,16 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import HeroSection from "../components/HeroSection.astro";
 import KitSection from "../components/KitSection.astro";
+import SubscriptionSection from "../components/SubscriptionSection.astro";
+import FooterContatos from "../components/FooterContatos.astro";
 ---
 
 <Layout title="Encantos Literários - Clube de Assinatura">
-    <Header/>
-    <HeroSection/>
-    <KitSection/>
-    <main class="text-text-body">
-        <section class="hero bg-shape-base py-20">
-            <div class="container mx-auto px-4">
-                <h1 class="text-5xl font-bold text-text-title mb-4">Bem-vindo ao <span class="text-pink-light">Encantos Literários</span>
-                </h1>
-                <p class="text-xl mb-8">Desperte a sua imaginação e explore novos mundos com o nosso clube de assinatura
-                    literária.</p>
-                <a href="#planos"
-                   class="bg-pink-base hover:bg-pink-dark text-white font-bold py-3 px-6 rounded-lg transition-colors">
-                    Conheça nossos planos
-                </a>
-            </div>
-        </section>
-
-        <section id="sobre" class="py-16">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-text-title mb-8">Sobre o Encantos Literários</h2>
-                <p class="text-lg mb-4">
-                    Receba todo mês um livro surpresa do seu tema favorito, acompanhado de brindes exclusivos
-                    que tornarão a sua experiência literária encantadora.
-                </p>
-                <!-- Adicione mais conteúdo sobre o clube aqui -->
-            </div>
-        </section>
-
-        <section id="planos" class="bg-shape-hover py-16">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-text-title mb-8">Nossos Planos</h2>
-                <!-- Adicione os componentes de planos aqui -->
-            </div>
-        </section>
-
-        <section id="contato" class="py-16">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-text-title mb-8">Entre em Contato</h2>
-                <!-- Adicione um formulário de contato ou informações de contato aqui -->
-            </div>
-        </section>
+    <Header />
+    <main>
+        <HeroSection />
+        <KitSection />
+        <SubscriptionSection />
     </main>
-    <footer class="bg-shape-background py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2024 Encantos Literários. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+    <FooterContatos />
 </Layout>

@@ -1,23 +1,92 @@
 ---
-import {Image} from 'astro:assets';
+import { Image } from 'astro:assets';
 import logoHorizontal from '../assets/img/logo-horizontal.png';
 ---
 
-<header class="bg-shape-background py-4">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-        <a href="/" class="flex items-center">
-            <Image src={logoHorizontal} alt="Encantos Literários" width={200} height={50}/>
-        </a>
-        <nav>
-            <ul class="flex space-x-6">
-                <li><a href="#sobre" class="text-text-body hover:text-text-title transition-colors">Sobre</a></li>
-                <li><a href="#planos" class="text-text-body hover:text-text-title transition-colors">Planos</a></li>
-                <li><a href="#contato" class="text-text-body hover:text-text-title transition-colors">Contato</a></li>
-            </ul>
+<header id="main-header" class="fixed w-full z-50 transition-all duration-300">
+    <div class="container mx-auto px-4">
+        <nav class="flex justify-between items-center py-4">
+            <div class="flex items-center animate-fade-in">
+                <Image src={logoHorizontal} alt="Encantos Literários" width={150} height={40} />
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#hero" class="text-white hover:text-pink-light transition-colors animate-slide-in" style="--delay: 0.1s;">Início</a>
+                <a href="#kit" class="text-white hover:text-pink-light transition-colors animate-slide-in" style="--delay: 0.2s;">Kit Mensal</a>
+                <a href="#planos" class="text-white hover:text-pink-light transition-colors animate-slide-in" style="--delay: 0.3s;">Planos</a>
+                <a href="#sobre" class="text-white hover:text-pink-light transition-colors animate-slide-in" style="--delay: 0.4s;">Sobre</a>
+                <a href="#contato" class="text-white hover:text-pink-light transition-colors animate-slide-in" style="--delay: 0.5s;">Contato</a>
+            </div>
+            <div class="animate-fade-in" style="--delay: 0.6s;">
+                <a href="#planos" class="bg-pink-base hover:bg-pink-light text-white font-bold py-2 px-4 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105">
+                    Assinar agora
+                </a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
         </nav>
-        <a href="#assinar"
-           class="bg-pink-base hover:bg-pink-dark text-white font-bold py-2 px-4 rounded transition-colors">
-            Assinar
-        </a>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-shape-base">
+        <div class="container mx-auto px-4 py-2">
+            <a href="#hero" class="block py-2 text-white hover:text-pink-light transition-colors">Início</a>
+            <a href="#kit" class="block py-2 text-white hover:text-pink-light transition-colors">Kit Mensal</a>
+            <a href="#planos" class="block py-2 text-white hover:text-pink-light transition-colors">Planos</a>
+            <a href="#sobre" class="block py-2 text-white hover:text-pink-light transition-colors">Sobre</a>
+            <a href="#contato" class="block py-2 text-white hover:text-pink-light transition-colors">Contato</a>
+        </div>
     </div>
 </header>
+
+<style>
+    .animate-fade-in {
+        opacity: 0;
+        animation: fadeIn 1s ease-out forwards;
+        animation-delay: var(--delay, 0s);
+    }
+
+    .animate-slide-in {
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: slideIn 0.8s ease-out forwards;
+        animation-delay: var(--delay, 0s);
+    }
+
+    @keyframes fadeIn {
+        to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<script>
+    const header = document.getElementById('main-header');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-shape-base');
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('bg-shape-base');
+                header.classList.remove('shadow-lg');
+            }
+        });
+    }
+
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+</script>
